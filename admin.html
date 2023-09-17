@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if request.user.is_authenticated %}
+        <h1>Admin Page</h1>
+        <p>Эта страница только для авторизированных пользователей.</p>
+    {% else %}
+        <p>Вы должны авторизироваться, чтобы воспользоваться этой страницей.</p>
+    {% endif %}
+{% endblock %}
